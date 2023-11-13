@@ -2,8 +2,9 @@ function verificationLogin() {
     document.getElementById('form').addEventListener('submit', ev => {
         ev.preventDefault()
     })
-        let username = document.getElementById("username").value;
-        let password = document.getElementById("password").value;
+        let username = document.getElementById("username").value
+        let password = document.getElementById("password").value
+        console.log(username, password)
 
         let users = JSON.parse(localStorage.getItem('users')) || [];
         console.log(users)
@@ -24,20 +25,21 @@ function registerNewUser() {
         ev.preventDefault()
     })
 
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+    let username = document.getElementById("username").value
+    let password = document.getElementById("password").value
     let confirmPass = document.getElementById("confirmPass").value
 
+
     if(password === confirmPass && username !== "") {
-        let users = JSON.parse(localStorage.getItem('users')) || [];
-        users.push({ username: username, password: password });
-        localStorage.setItem('users', JSON.stringify(users));
+        let users = JSON.parse(localStorage.getItem('users')) || []
+        users.push({ username: username, password: password })
+        localStorage.setItem('users', JSON.stringify(users))
     
         alert('Usuário cadastrado com sucesso!');
     } else {
         alert("As senhas não são iguais!")
     }
-    console.log(users)
+   
 }
 
 function clearStorage () {
