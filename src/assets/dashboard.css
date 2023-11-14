@@ -125,6 +125,7 @@ header .image-text .header-text {
 }
 
 .card-game {
+    cursor: pointer;
     background-color: rgb(160, 160, 160);
     display: flex;
 }
@@ -295,6 +296,7 @@ h3 {
 
 .select-dropdown,
 .select-dropdown * {
+    cursor: pointer;
     margin: 0;
     padding: 0;
     position: relative;
@@ -346,6 +348,3 @@ h3 {
     width: 100%;
 }
 
-#filter .select-dropdown {
-    /* width: 200px; */
-}
