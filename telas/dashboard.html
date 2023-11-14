@@ -6,15 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="/assets/feacture/login.js"></script>
   <link rel="stylesheet" href="../assets/dashboard.css">
-  <script src="../assets/feacture/login.js"></script>
   <title>Dashboard</title>
- 
+
 </head>
 
 <body>
   <nav class="sidebar">
     <header>
-      <div class="image-text">  
+      <div class="image-text">
         <span class="image">
           <img src="../assets/images/A_rabbit_wearin_0.png" alt="logo">
         </span>
@@ -31,11 +30,6 @@
               <span class="text nav-text">Jogos</span>
             </a>
           </li>
-          <li class="nav-link">
-            <a href="#">
-              <span class="text nav-text">Plataformas</span>
-            </a>
-          </li>
         </ul>
         <div class="bottom-content">
           <li class="nav-link">
@@ -48,9 +42,108 @@
     </div>
   </nav>
 
-  <section class="home">
-      <div class="text"> DSAASDSADS</div>
+  <div id="home" class="home ">
+    <div id="filter">
+      <div id="selectStore" class="select-dropdown" style="width: 200px;">
+        <select>
+          <option placeholder="Plataformas">Plataformas</option>
+          <option value="Option 2">1</option>
+          <option value="Option 3">2</option>
+          <option value="Option 3">3</option>
+        </select>
+      </div>
+    </div>
+    <div id="grid">
+    </div>
+  </div>
+
+  <section class="modal hidden">
+    <div class="flex">
+      <button class="btn-close">⨉</button>
+    </div>
+    <div>
+      <form>
+        <h3>Cadastrar Jogo</h3>
+      </form>
+    </div>
+
+    <input type="text" id="text" placeholder="Nome do Jogo" />
+    <input type="text" id="text" placeholder="Plataforma" />
+    <input type="text" id="text" placeholder="Upload da imagem" />
+    <div>
+      <label class="list">Recomendado
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="list">Não Recomendado
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div>
+      <label class="list">Zerado
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="list">Não Zerado
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+
+
+    <button class="btn">Cadastrar</button>
   </section>
+
+
+  <section class="edit-modal hidden">
+    <div class="flex">
+      <button class="edit-close">⨉</button>
+    </div>
+    <div>
+      <form>
+        <h3>Editar Jogo</h3>
+      </form>
+    </div>
+
+    <input type="text" id="text" value="World Of Warcraft" />
+    <input type="text" id="text" value="PC" />
+    <div>
+      <label class="list">Recomendado
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="list">Não Recomendado
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div>
+      <label class="list">Zerado
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="list">Não Zerado
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+
+
+    <button class="btn">Salvar</button>
+  </section>
+  <div class="overlay hidden"></div>
+  <div class="edit-overlay hidden"></div>
+
+
+  <script src="../assets/feacture/login.js"></script>
+  <script src="../assets/feacture/dashboard.js"></script>
 </body>
 
 </html>
